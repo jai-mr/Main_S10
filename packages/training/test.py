@@ -18,7 +18,7 @@ class Test:
         self.model.eval()
         correct = 0
         tloss = 0
-        gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+        gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
         with torch.no_grad():
             for data, target in self.test_loader:
                 data, target = data.to(self.device), target.to(self.device)
