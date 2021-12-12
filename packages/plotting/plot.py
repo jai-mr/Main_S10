@@ -67,7 +67,7 @@ def _test_mis(model, device, test_loader):
 
 def mis(model, device, test_loader, nimage = 64, dataset_used= 'CIFAR10'):
     """Display the 'nimage' number of misclassified images."""
-    gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+    gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
 #    print("dataset_used :",dataset_used)
     if dataset_used == 'CIFAR10':
       classes = ('plane', 'car', 'bird', 'cat',
@@ -106,7 +106,7 @@ def mis(model, device, test_loader, nimage = 64, dataset_used= 'CIFAR10'):
         x = inv_norm(img[index], dataset_used= dataset_used)      # unnormalize
         x = x.permute(1, 2, 0) # (C, M, N) -> (M, N, C)
         x = x.cpu().numpy()
-        gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+        gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
         ###########
         #To Save mis classified image for further use in GradCAM
         path = gdrivepath + f'mis_class/images/mis_{index+10}.png'
@@ -147,7 +147,7 @@ def gen_cam(model, layer, class_idx= None, hm_lay= 0.5, img_lay= 0.5, dataset_us
     #Create directory for saving GradCAM images.
 
     # Create target Directory if don't exist
-    gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+    gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
     if class_idx is None:
         dirName = gdrivepath + 'result_pred/'
         dir2Name = gdrivepath + 'heatmap_pred/'
@@ -211,10 +211,10 @@ def gen_cam(model, layer, class_idx= None, hm_lay= 0.5, img_lay= 0.5, dataset_us
         save_image(result, fp=fp_path_res)
 
 def plot_pred_cam(n,l):
-  drivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+  drivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
   fig, axes = plt.subplots(n, l+2, figsize=((l+2)*3,n*2.5))
   fig.suptitle("Grad-CAM of Mis Classified Images with respect to Predicted(wrong) Class", fontsize=20)
-  gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"  
+  gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"  
   for index in range(0, n):
       # plt.subplot(n, l+1, index+1)
       plt.xticks([])
@@ -236,7 +236,7 @@ def plot_pred_cam(n,l):
   plt.show()
 
 def plot_act_cam(n,l):
-  gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+  gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
   fig, axes = plt.subplots(n, l+2, figsize=((l+2)*3,n*2.5))
   fig.suptitle("Grad-CAM of Mis Classified Images with respect to Actual(correct) Class", fontsize=20)
   for index in range(0, n):
@@ -262,7 +262,7 @@ def plot_act_cam(n,l):
 
 
 def plot_pred_heatmap(n,l):
-  gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+  gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
   fig, axes = plt.subplots(n, l+2, figsize=((l+2)*3,n*2.5))
   fig.suptitle("Grad-CAM - Heatmap of Mis Classified Images with respect to Predicted(wrong) Class", fontsize=20)
   for index in range(0, n):
@@ -286,7 +286,7 @@ def plot_pred_heatmap(n,l):
   plt.show()
 
 def plot_act_heatmap(n,l):
-  gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+  gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
   fig, axes = plt.subplots(n, l+2, figsize=((l+2)*3,n*2.5))
   fig.suptitle("Grad-CAM - Heatmap of Mis Classified Images with respect to Actual(correct) Class", fontsize=20)
   for index in range(0, n):
