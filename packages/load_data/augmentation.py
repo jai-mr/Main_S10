@@ -4,7 +4,7 @@ import cv2
 import torchvision.transforms as T
 import albumentations as alb
 from albumentations.pytorch import ToTensor
-import packages.load_data.albumentations.pytorch.transforms as AT
+import albumentations.pytorch.transforms as AT
 import numpy as np
 
 class AlbumentationTrans:
