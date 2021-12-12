@@ -11,8 +11,8 @@ from torchvision.datasets import ImageFolder
 from torchvision.utils import save_image
 from math import floor
 
-from gradCAM import GradCAM
-from datasets import _Getdata
+from plotting.gradCAM import GradCAM
+from load_data.datasets import _Getdata
 
 pred_list= []
 true_list = []
