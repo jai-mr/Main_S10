@@ -166,7 +166,7 @@ class MainFile():
 
         print('='*20 + ' RESULTS ' + '='*20)
         print('Best Train Accuracy: ', max(self.train.train_endacc))
-        gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+        gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
         if self.val_loader:
             print('Best Validation Accuracy: ', max(self.test.test_acc))
             print('Runnign Best Model on Test Loader:')
@@ -181,7 +181,7 @@ class MainFile():
         print('='*49)
         
     def plot_graphs(self, test_loader, accuracy_plot= True, testvtrain_plot= True, classwise_acc= True):
-        gdrivepath="gdrive/My Drive/Colab Notebooks/S12/content/"
+        gdrivepath="/content/gdrive/MyDrive/ColabFiles/EVA7/S10/"
         try:
             self.best_model.eval()
         except:
