@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from torch.utils.data import random_split
 
-from datasets import TINDataset, _Getdata
+from load_data.datasets import TINDataset, _Getdata
 
-from augmentation import MNIST_Transforms, CIFAR10_Transforms, CIFAR10_AlbumTrans, TinyImageNet_AlbumTrans
+from load_data.augmentation import MNIST_Transforms, CIFAR10_Transforms, CIFAR10_AlbumTrans, TinyImageNet_AlbumTrans
 
 class MNISTDataLoader:
     """
