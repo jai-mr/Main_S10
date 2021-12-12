@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from torchsummary import summary
 import torchvision
 
-from load_data.datasets import _Getdata
+from packages.load_data.datasets import _Getdata
 
 
 #classes = ('plane', 'car', 'bird', 'cat','deer', 'dog', 'frog', 'horse', 'ship', 'truck')
